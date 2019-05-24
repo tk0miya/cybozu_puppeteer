@@ -1,0 +1,10 @@
+CYBOZU_BASEURL = '';
+CYBOZU_USERNAME = '';
+CYBOZU_PASSWORD = '';
+CYBOZU_BASICAUTH_USER = '';
+CYBOZU_BASICAUTH_PASS = '';
+
+// Allow to override CYBOZU_PASSWORD via envvars
+if (process.env.CYBOZU_PASSWORD) {
+    CYBOZU_PASSWORD = process.env.CYBOZU_PASSWORD;
+};
