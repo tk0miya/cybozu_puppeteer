@@ -53,7 +53,7 @@ function shuffle(array) {
     }
 
     // Move to UserListIndex page
-    await page.goto(CYBOZU_BASEURL + '?page=UserListIndex', { waitUntil: "domcontentloaded" });
+    await page.goto(CYBOZU_BASEURL + '?page=UserListIndex&GID=5642', { waitUntil: "domcontentloaded" });
 
     // scrape user list
     const users = await page.evaluate(() => {
@@ -69,7 +69,7 @@ function shuffle(array) {
     });
 
     // shuffle and celebrate TOP5 members!
-    shuffle(users).slice(0, 5).forEach((user, index) => {
+    shuffle(users).slice(0, 10).forEach((user, index) => {
         console.log(`${index + 1}. ${user[0]} (${user[1] })`);
     });
     browser.close();
